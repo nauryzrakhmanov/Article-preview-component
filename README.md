@@ -26,8 +26,8 @@ Users have the ability to:
 
 ### Links
 
-- Solution URL: https://nauryzrakhmanov.github.io/aaa /
-- URL of the live site: https://nauryzrakhmanov.github.io/aaa/
+- Solution URL: https://github.com/nauryzrakhmanov/Article-preview-component
+- URL of the live site: https://nauryzrakhmanov.github.io/Article-preview-component/
 
 ## My process
 
@@ -123,7 +123,7 @@ templates found there and I will use it in the future.
 
 ## Author
 
-- Website - [Nauryz Rakhmanov and Ayakoz Mukiyat] (https://nauryzrakhmanov.github.io/aaa/ )
+- Website - [Nauryz Rakhmanov and Ayakoz Mukiyat] (https://github.com/nauryzrakhmanov/Article-preview-component)
 - Interface Mentor - [ Togzhan Kurmanbek] 
 - Instagram - [@ayagoozm](https://www.instagram.com/ayagoozm/ ) 
               [@nauryz_rahmanov](https://www.instagram.com/nauryz_rahmanov/ )
