@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <title>Frontend Mentor | Article preview component</title>
+<style>
+body {
+    background: hsl(210, 46%, 95%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#card {
+    background: white;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-gap: 20px;
+    width: 680px;
+    border-radius: 10px;
+    box-shadow: 10px;
+}
+
+#leftside img {
+  height: 100%;
+  width: 280px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+#rightside {
+    font-size: 13px;
+    padding: 20px;
+    font-family: 'Manrope', sans-serif;
+    color: hsl(214, 17%, 51%);
+    font-weight: 500;
+}
+
+#information {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-gap: 10px;
+}
+
+#picture img {
+    border-radius: 100%;
+    width: 40px;
+}
+
+.share-icon {
+    transform: translateY(7px) translateX(7px);
+}
+
+.sharetext {
+    display: flex;
+}
+
+.sharetext img {
+    padding: 1px;
+    margin-top: 4px;
+    margin-left: 1px;
+}
+
+.shareclick {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background: hsl(210, 46%, 95%);
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+}
+
+.shareclick img {
+    transform: translateX(6px) translateY(6px);
+}
+  
+.shareclick .sharetext {
+    visibility: hidden;
+    width: 190px;
+    background: hsl(217, 19%, 35%);
+    color:hsl(212, 23%, 69%);
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: -20%;
+    margin-left: -80px;
+    letter-spacing: 3px;
+}
+  
+.shareclick .sharetext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:  hsl(217, 19%, 35%) transparent transparent transparent;
+}
+  
+.shareclick .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    padding: 10px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+</style>
+
+</head>
+
+<body>
+  <div id="card">
+  <div id="leftside">
+    <img src="images/drawers.jpg" alt="drawer">
+  </div>
+
+  <div id="rightside"> 
+  
+    <div>
+  <h2 style="color: hsl(217, 19%, 35%);font-weight: 700;">Shift the overall look and feel by adding these wonderful 
+  touches to furniture in your home</h2>
+
+  <p style="line-height: 20px; padding-bottom: 10px;">Ever been in a room and felt like something was missing? Perhaps  
+  it felt slightly bare and uninviting. I’ve got some simple tips 
+  to help you make any room feel complete.</p>
+    </div>
+
+<div id="information">
+  <div id="picture">
+    <img src="images/avatar-michelle.jpg" alt="avatar">
+  </div>
+  <div>
+  <h4 style="color: hsl(217, 19%, 35%);font-weight: 700; margin: 0px; padding-top: 0px;">Michelle Appleton</h4>
+  <p style="margin: 0px;">28 Jun 2020</p>
+  </div>
+  
+  <div class="shareclick" onclick="myFunction()">
+          <img class="share-icon" src="https://raw.githubusercontent.com/lynnecodes/FM-articlepreviewcomponent/92b81157a3a4fecbf661a3c4477025b470c6994e/images/icon-share.svg">
+          <span class="sharetext" id="mytext">
+            <div>
+              <p style=" padding: 3px; margin-top: 15px;margin-left: 10px;">SHARE</p>
+            </div>
+            <div>
+              <a href="#"><img src="https://raw.githubusercontent.com/lynnecodes/FM-articlepreviewcomponent/92b81157a3a4fecbf661a3c4477025b470c6994e/images/icon-facebook.svg"></a>
+              <a href="#"><img src="https://raw.githubusercontent.com/lynnecodes/FM-articlepreviewcomponent/92b81157a3a4fecbf661a3c4477025b470c6994e/images/icon-twitter.svg"></a>
+              <a href="#"><img src="https://raw.githubusercontent.com/lynnecodes/FM-articlepreviewcomponent/92b81157a3a4fecbf661a3c4477025b470c6994e/images/icon-pinterest.svg"></a>
+            </div>
+          </span>
+  </div>
+</div>
+  </div>
+  </div>
+</div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.instagram.com/nauryz_rahmanov/">Nauryz</a> and <a href="https://www.instagram.com/ayagoozm/">Ayakoz </a>.
+  </div>
+
+  <script>
+    function myFunction() {
+      var shareclick = document.getElementById("mytext");
+      shareclick.classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
